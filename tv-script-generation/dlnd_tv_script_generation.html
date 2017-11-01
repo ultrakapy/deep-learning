@@ -11884,7 +11884,7 @@ Hans: Ech, nein. We are from Germany. He is from the East. I am from the West.
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># TODO: Implement Function</span>
     <span class="n">vocab</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-    <span class="n">vocab_to_int</span> <span class="o">=</span> <span class="p">{</span><span class="n">word</span><span class="p">:</span> <span class="nb">int</span> <span class="k">for</span> <span class="nb">int</span><span class="p">,</span> <span class="n">word</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">vocab</span><span class="p">,</span> <span class="mi">1</span><span class="p">)}</span>
+    <span class="n">vocab_to_int</span> <span class="o">=</span> <span class="p">{</span><span class="n">word</span><span class="p">:</span> <span class="nb">int</span> <span class="k">for</span> <span class="nb">int</span><span class="p">,</span> <span class="n">word</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">vocab</span><span class="p">)}</span>
     <span class="n">int_to_vocab</span> <span class="o">=</span> <span class="p">{</span><span class="nb">int</span><span class="p">:</span> <span class="n">word</span> <span class="k">for</span> <span class="n">word</span><span class="p">,</span> <span class="nb">int</span> <span class="ow">in</span> <span class="n">vocab_to_int</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
     
     <span class="k">return</span> <span class="n">vocab_to_int</span><span class="p">,</span> <span class="n">int_to_vocab</span>
@@ -12533,7 +12533,7 @@ Hans: Ech, nein. We are from Germany. He is from the East. I am from the West.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Number of Epochs</span>
@@ -12574,7 +12574,7 @@ Hans: Ech, nein. We are from Germany. He is from the East. I am from the West.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12625,7 +12625,7 @@ Hans: Ech, nein. We are from Germany. He is from the East. I am from the West.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12671,140 +12671,112 @@ Hans: Ech, nein. We are from Germany. He is from the East. I am from the West.
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch   0 Batch    0/67   train_loss = 8.822
-</pre>
-</div>
-</div>
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">InvalidArgumentError</span>                      Traceback (most recent call last)
-<span class="ansi-green-fg">/home/kapy/anaconda3/envs/dlnd-tf-lab/lib/python3.5/site-packages/tensorflow/python/client/session.py</span> in <span class="ansi-cyan-fg">_do_call</span><span class="ansi-blue-fg">(self, fn, *args)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1021</span>     <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">-&gt; 1022</span><span class="ansi-red-fg">       </span><span class="ansi-green-fg">return</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1023</span>     <span class="ansi-green-fg">except</span> errors<span class="ansi-blue-fg">.</span>OpError <span class="ansi-green-fg">as</span> e<span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">/home/kapy/anaconda3/envs/dlnd-tf-lab/lib/python3.5/site-packages/tensorflow/python/client/session.py</span> in <span class="ansi-cyan-fg">_run_fn</span><span class="ansi-blue-fg">(session, feed_dict, fetch_list, target_list, options, run_metadata)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1003</span>                                  feed_dict<span class="ansi-blue-fg">,</span> fetch_list<span class="ansi-blue-fg">,</span> target_list<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-fg">-&gt; 1004</span><span class="ansi-red-fg">                                  status, run_metadata)
-</span><span class="ansi-green-intense-fg ansi-bold">   1005</span> 
-
-<span class="ansi-green-fg">/home/kapy/anaconda3/envs/dlnd-tf-lab/lib/python3.5/contextlib.py</span> in <span class="ansi-cyan-fg">__exit__</span><span class="ansi-blue-fg">(self, type, value, traceback)</span>
-<span class="ansi-green-intense-fg ansi-bold">     65</span>             <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">---&gt; 66</span><span class="ansi-red-fg">                 </span>next<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>gen<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     67</span>             <span class="ansi-green-fg">except</span> StopIteration<span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">/home/kapy/anaconda3/envs/dlnd-tf-lab/lib/python3.5/site-packages/tensorflow/python/framework/errors_impl.py</span> in <span class="ansi-cyan-fg">raise_exception_on_not_ok_status</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">    468</span>           compat<span class="ansi-blue-fg">.</span>as_text<span class="ansi-blue-fg">(</span>pywrap_tensorflow<span class="ansi-blue-fg">.</span>TF_Message<span class="ansi-blue-fg">(</span>status<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span>
-<span class="ansi-green-fg">--&gt; 469</span><span class="ansi-red-fg">           pywrap_tensorflow.TF_GetCode(status))
-</span><span class="ansi-green-intense-fg ansi-bold">    470</span>   <span class="ansi-green-fg">finally</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-red-fg">InvalidArgumentError</span>: indices[33,5] = 6779 is not in [0, 6779)
-	 [[Node: embedding_lookup = Gather[Tindices=DT_INT32, Tparams=DT_FLOAT, _class=[&#34;loc:@Variable&#34;], validate_indices=true, _device=&#34;/job:localhost/replica:0/task:0/cpu:0&#34;](Variable/read, _recv_input_0)]]
-
-During handling of the above exception, another exception occurred:
-
-<span class="ansi-red-fg">InvalidArgumentError</span>                      Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-20-396c263e7e73&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     16</span>                 initial_state<span class="ansi-blue-fg">:</span> state<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">     17</span>                 lr: learning_rate}
-<span class="ansi-green-fg">---&gt; 18</span><span class="ansi-red-fg">             </span>train_loss<span class="ansi-blue-fg">,</span> state<span class="ansi-blue-fg">,</span> _ <span class="ansi-blue-fg">=</span> sess<span class="ansi-blue-fg">.</span>run<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span>cost<span class="ansi-blue-fg">,</span> final_state<span class="ansi-blue-fg">,</span> train_op<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> feed<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     19</span> 
-<span class="ansi-green-intense-fg ansi-bold">     20</span>             <span class="ansi-red-fg"># Show every &lt;show_every_n_batches&gt; batches</span>
-
-<span class="ansi-green-fg">/home/kapy/anaconda3/envs/dlnd-tf-lab/lib/python3.5/site-packages/tensorflow/python/client/session.py</span> in <span class="ansi-cyan-fg">run</span><span class="ansi-blue-fg">(self, fetches, feed_dict, options, run_metadata)</span>
-<span class="ansi-green-intense-fg ansi-bold">    765</span>     <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    766</span>       result = self._run(None, fetches, feed_dict, options_ptr,
-<span class="ansi-green-fg">--&gt; 767</span><span class="ansi-red-fg">                          run_metadata_ptr)
-</span><span class="ansi-green-intense-fg ansi-bold">    768</span>       <span class="ansi-green-fg">if</span> run_metadata<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    769</span>         proto_data <span class="ansi-blue-fg">=</span> tf_session<span class="ansi-blue-fg">.</span>TF_GetBuffer<span class="ansi-blue-fg">(</span>run_metadata_ptr<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">/home/kapy/anaconda3/envs/dlnd-tf-lab/lib/python3.5/site-packages/tensorflow/python/client/session.py</span> in <span class="ansi-cyan-fg">_run</span><span class="ansi-blue-fg">(self, handle, fetches, feed_dict, options, run_metadata)</span>
-<span class="ansi-green-intense-fg ansi-bold">    963</span>     <span class="ansi-green-fg">if</span> final_fetches <span class="ansi-green-fg">or</span> final_targets<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    964</span>       results = self._do_run(handle, final_targets, final_fetches,
-<span class="ansi-green-fg">--&gt; 965</span><span class="ansi-red-fg">                              feed_dict_string, options, run_metadata)
-</span><span class="ansi-green-intense-fg ansi-bold">    966</span>     <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    967</span>       results <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">]</span>
-
-<span class="ansi-green-fg">/home/kapy/anaconda3/envs/dlnd-tf-lab/lib/python3.5/site-packages/tensorflow/python/client/session.py</span> in <span class="ansi-cyan-fg">_do_run</span><span class="ansi-blue-fg">(self, handle, target_list, fetch_list, feed_dict, options, run_metadata)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1013</span>     <span class="ansi-green-fg">if</span> handle <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   1014</span>       return self._do_call(_run_fn, self._session, feed_dict, fetch_list,
-<span class="ansi-green-fg">-&gt; 1015</span><span class="ansi-red-fg">                            target_list, options, run_metadata)
-</span><span class="ansi-green-intense-fg ansi-bold">   1016</span>     <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   1017</span>       return self._do_call(_prun_fn, self._session, handle, feed_dict,
-
-<span class="ansi-green-fg">/home/kapy/anaconda3/envs/dlnd-tf-lab/lib/python3.5/site-packages/tensorflow/python/client/session.py</span> in <span class="ansi-cyan-fg">_do_call</span><span class="ansi-blue-fg">(self, fn, *args)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1033</span>         <span class="ansi-green-fg">except</span> KeyError<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   1034</span>           <span class="ansi-green-fg">pass</span>
-<span class="ansi-green-fg">-&gt; 1035</span><span class="ansi-red-fg">       </span><span class="ansi-green-fg">raise</span> type<span class="ansi-blue-fg">(</span>e<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">(</span>node_def<span class="ansi-blue-fg">,</span> op<span class="ansi-blue-fg">,</span> message<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1036</span> 
-<span class="ansi-green-intense-fg ansi-bold">   1037</span>   <span class="ansi-green-fg">def</span> _extend_graph<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-red-fg">InvalidArgumentError</span>: indices[33,5] = 6779 is not in [0, 6779)
-	 [[Node: embedding_lookup = Gather[Tindices=DT_INT32, Tparams=DT_FLOAT, _class=[&#34;loc:@Variable&#34;], validate_indices=true, _device=&#34;/job:localhost/replica:0/task:0/cpu:0&#34;](Variable/read, _recv_input_0)]]
-
-Caused by op &#39;embedding_lookup&#39;, defined at:
-  File &#34;/home/kapy/anaconda3/envs/dlnd-tf-lab/lib/python3.5/runpy.py&#34;, line 193, in _run_module_as_main
-    &#34;__main__&#34;, mod_spec)
-  File &#34;/home/kapy/anaconda3/envs/dlnd-tf-lab/lib/python3.5/runpy.py&#34;, line 85, in _run_code
-    exec(code, run_globals)
-  File &#34;/home/kapy/anaconda3/envs/dlnd-tf-lab/lib/python3.5/site-packages/ipykernel/__main__.py&#34;, line 3, in &lt;module&gt;
-    app.launch_new_instance()
-  File &#34;/home/kapy/anaconda3/envs/dlnd-tf-lab/lib/python3.5/site-packages/traitlets/config/application.py&#34;, line 658, in launch_instance
-    app.start()
-  File &#34;/home/kapy/anaconda3/envs/dlnd-tf-lab/lib/python3.5/site-packages/ipykernel/kernelapp.py&#34;, line 474, in start
-    ioloop.IOLoop.instance().start()
-  File &#34;/home/kapy/anaconda3/envs/dlnd-tf-lab/lib/python3.5/site-packages/zmq/eventloop/ioloop.py&#34;, line 177, in start
-    super(ZMQIOLoop, self).start()
-  File &#34;/home/kapy/anaconda3/envs/dlnd-tf-lab/lib/python3.5/site-packages/tornado/ioloop.py&#34;, line 887, in start
-    handler_func(fd_obj, events)
-  File &#34;/home/kapy/anaconda3/envs/dlnd-tf-lab/lib/python3.5/site-packages/tornado/stack_context.py&#34;, line 275, in null_wrapper
-    return fn(*args, **kwargs)
-  File &#34;/home/kapy/anaconda3/envs/dlnd-tf-lab/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py&#34;, line 440, in _handle_events
-    self._handle_recv()
-  File &#34;/home/kapy/anaconda3/envs/dlnd-tf-lab/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py&#34;, line 472, in _handle_recv
-    self._run_callback(callback, msg)
-  File &#34;/home/kapy/anaconda3/envs/dlnd-tf-lab/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py&#34;, line 414, in _run_callback
-    callback(*args, **kwargs)
-  File &#34;/home/kapy/anaconda3/envs/dlnd-tf-lab/lib/python3.5/site-packages/tornado/stack_context.py&#34;, line 275, in null_wrapper
-    return fn(*args, **kwargs)
-  File &#34;/home/kapy/anaconda3/envs/dlnd-tf-lab/lib/python3.5/site-packages/ipykernel/kernelbase.py&#34;, line 276, in dispatcher
-    return self.dispatch_shell(stream, msg)
-  File &#34;/home/kapy/anaconda3/envs/dlnd-tf-lab/lib/python3.5/site-packages/ipykernel/kernelbase.py&#34;, line 228, in dispatch_shell
-    handler(stream, idents, msg)
-  File &#34;/home/kapy/anaconda3/envs/dlnd-tf-lab/lib/python3.5/site-packages/ipykernel/kernelbase.py&#34;, line 390, in execute_request
-    user_expressions, allow_stdin)
-  File &#34;/home/kapy/anaconda3/envs/dlnd-tf-lab/lib/python3.5/site-packages/ipykernel/ipkernel.py&#34;, line 196, in do_execute
-    res = shell.run_cell(code, store_history=store_history, silent=silent)
-  File &#34;/home/kapy/anaconda3/envs/dlnd-tf-lab/lib/python3.5/site-packages/ipykernel/zmqshell.py&#34;, line 501, in run_cell
-    return super(ZMQInteractiveShell, self).run_cell(*args, **kwargs)
-  File &#34;/home/kapy/anaconda3/envs/dlnd-tf-lab/lib/python3.5/site-packages/IPython/core/interactiveshell.py&#34;, line 2717, in run_cell
-    interactivity=interactivity, compiler=compiler, result=result)
-  File &#34;/home/kapy/anaconda3/envs/dlnd-tf-lab/lib/python3.5/site-packages/IPython/core/interactiveshell.py&#34;, line 2821, in run_ast_nodes
-    if self.run_code(code, result):
-  File &#34;/home/kapy/anaconda3/envs/dlnd-tf-lab/lib/python3.5/site-packages/IPython/core/interactiveshell.py&#34;, line 2881, in run_code
-    exec(code_obj, self.user_global_ns, self.user_ns)
-  File &#34;&lt;ipython-input-19-a2d9a7091ca5&gt;&#34;, line 12, in &lt;module&gt;
-    logits, final_state = build_nn(cell, rnn_size, input_text, vocab_size, embed_dim)
-  File &#34;&lt;ipython-input-12-81b341aa43f0&gt;&#34;, line 14, in build_nn
-    embed = get_embed(input_data, vocab_size, embed_dim)
-  File &#34;&lt;ipython-input-10-61f0f5453f97&gt;&#34;, line 11, in get_embed
-    embed = tf.nn.embedding_lookup(embedding, input_data)
-  File &#34;/home/kapy/anaconda3/envs/dlnd-tf-lab/lib/python3.5/site-packages/tensorflow/python/ops/embedding_ops.py&#34;, line 111, in embedding_lookup
-    validate_indices=validate_indices)
-  File &#34;/home/kapy/anaconda3/envs/dlnd-tf-lab/lib/python3.5/site-packages/tensorflow/python/ops/gen_array_ops.py&#34;, line 1359, in gather
-    validate_indices=validate_indices, name=name)
-  File &#34;/home/kapy/anaconda3/envs/dlnd-tf-lab/lib/python3.5/site-packages/tensorflow/python/framework/op_def_library.py&#34;, line 763, in apply_op
-    op_def=op_def)
-  File &#34;/home/kapy/anaconda3/envs/dlnd-tf-lab/lib/python3.5/site-packages/tensorflow/python/framework/ops.py&#34;, line 2395, in create_op
-    original_op=self._default_original_op, op_def=op_def)
-  File &#34;/home/kapy/anaconda3/envs/dlnd-tf-lab/lib/python3.5/site-packages/tensorflow/python/framework/ops.py&#34;, line 1264, in __init__
-    self._traceback = _extract_stack()
-
-InvalidArgumentError (see above for traceback): indices[33,5] = 6779 is not in [0, 6779)
-	 [[Node: embedding_lookup = Gather[Tindices=DT_INT32, Tparams=DT_FLOAT, _class=[&#34;loc:@Variable&#34;], validate_indices=true, _device=&#34;/job:localhost/replica:0/task:0/cpu:0&#34;](Variable/read, _recv_input_0)]]
+<pre>Epoch   0 Batch    0/67   train_loss = 8.821
+Epoch   0 Batch   64/67   train_loss = 5.547
+Epoch   1 Batch   61/67   train_loss = 4.859
+Epoch   2 Batch   58/67   train_loss = 4.666
+Epoch   3 Batch   55/67   train_loss = 4.539
+Epoch   4 Batch   52/67   train_loss = 4.201
+Epoch   5 Batch   49/67   train_loss = 4.144
+Epoch   6 Batch   46/67   train_loss = 3.964
+Epoch   7 Batch   43/67   train_loss = 3.843
+Epoch   8 Batch   40/67   train_loss = 3.737
+Epoch   9 Batch   37/67   train_loss = 3.390
+Epoch  10 Batch   34/67   train_loss = 3.300
+Epoch  11 Batch   31/67   train_loss = 3.220
+Epoch  12 Batch   28/67   train_loss = 3.160
+Epoch  13 Batch   25/67   train_loss = 2.836
+Epoch  14 Batch   22/67   train_loss = 2.766
+Epoch  15 Batch   19/67   train_loss = 2.709
+Epoch  16 Batch   16/67   train_loss = 2.550
+Epoch  17 Batch   13/67   train_loss = 2.344
+Epoch  18 Batch   10/67   train_loss = 2.351
+Epoch  19 Batch    7/67   train_loss = 2.257
+Epoch  20 Batch    4/67   train_loss = 2.129
+Epoch  21 Batch    1/67   train_loss = 2.063
+Epoch  21 Batch   65/67   train_loss = 1.804
+Epoch  22 Batch   62/67   train_loss = 1.827
+Epoch  23 Batch   59/67   train_loss = 1.741
+Epoch  24 Batch   56/67   train_loss = 1.519
+Epoch  25 Batch   53/67   train_loss = 1.513
+Epoch  26 Batch   50/67   train_loss = 1.435
+Epoch  27 Batch   47/67   train_loss = 1.371
+Epoch  28 Batch   44/67   train_loss = 1.371
+Epoch  29 Batch   41/67   train_loss = 1.260
+Epoch  30 Batch   38/67   train_loss = 1.240
+Epoch  31 Batch   35/67   train_loss = 1.335
+Epoch  32 Batch   32/67   train_loss = 1.148
+Epoch  33 Batch   29/67   train_loss = 1.181
+Epoch  34 Batch   26/67   train_loss = 1.146
+Epoch  35 Batch   23/67   train_loss = 1.066
+Epoch  36 Batch   20/67   train_loss = 1.048
+Epoch  37 Batch   17/67   train_loss = 1.039
+Epoch  38 Batch   14/67   train_loss = 1.013
+Epoch  39 Batch   11/67   train_loss = 1.005
+Epoch  40 Batch    8/67   train_loss = 0.952
+Epoch  41 Batch    5/67   train_loss = 0.981
+Epoch  42 Batch    2/67   train_loss = 0.972
+Epoch  42 Batch   66/67   train_loss = 0.972
+Epoch  43 Batch   63/67   train_loss = 0.938
+Epoch  44 Batch   60/67   train_loss = 0.872
+Epoch  45 Batch   57/67   train_loss = 0.919
+Epoch  46 Batch   54/67   train_loss = 0.879
+Epoch  47 Batch   51/67   train_loss = 0.964
+Epoch  48 Batch   48/67   train_loss = 0.850
+Epoch  49 Batch   45/67   train_loss = 0.894
+Epoch  50 Batch   42/67   train_loss = 0.933
+Epoch  51 Batch   39/67   train_loss = 0.869
+Epoch  52 Batch   36/67   train_loss = 0.896
+Epoch  53 Batch   33/67   train_loss = 0.893
+Epoch  54 Batch   30/67   train_loss = 0.851
+Epoch  55 Batch   27/67   train_loss = 0.923
+Epoch  56 Batch   24/67   train_loss = 0.884
+Epoch  57 Batch   21/67   train_loss = 0.804
+Epoch  58 Batch   18/67   train_loss = 0.823
+Epoch  59 Batch   15/67   train_loss = 0.777
+Epoch  60 Batch   12/67   train_loss = 0.739
+Epoch  61 Batch    9/67   train_loss = 0.736
+Epoch  62 Batch    6/67   train_loss = 0.727
+Epoch  63 Batch    3/67   train_loss = 0.708
+Epoch  64 Batch    0/67   train_loss = 0.673
+Epoch  64 Batch   64/67   train_loss = 0.677
+Epoch  65 Batch   61/67   train_loss = 0.609
+Epoch  66 Batch   58/67   train_loss = 0.595
+Epoch  67 Batch   55/67   train_loss = 0.642
+Epoch  68 Batch   52/67   train_loss = 0.620
+Epoch  69 Batch   49/67   train_loss = 0.596
+Epoch  70 Batch   46/67   train_loss = 0.587
+Epoch  71 Batch   43/67   train_loss = 0.565
+Epoch  72 Batch   40/67   train_loss = 0.604
+Epoch  73 Batch   37/67   train_loss = 0.559
+Epoch  74 Batch   34/67   train_loss = 0.590
+Epoch  75 Batch   31/67   train_loss = 0.535
+Epoch  76 Batch   28/67   train_loss = 0.534
+Epoch  77 Batch   25/67   train_loss = 0.501
+Epoch  78 Batch   22/67   train_loss = 0.522
+Epoch  79 Batch   19/67   train_loss = 0.551
+Epoch  80 Batch   16/67   train_loss = 0.500
+Epoch  81 Batch   13/67   train_loss = 0.497
+Epoch  82 Batch   10/67   train_loss = 0.489
+Epoch  83 Batch    7/67   train_loss = 0.533
+Epoch  84 Batch    4/67   train_loss = 0.536
+Epoch  85 Batch    1/67   train_loss = 0.554
+Epoch  85 Batch   65/67   train_loss = 0.487
+Epoch  86 Batch   62/67   train_loss = 0.577
+Epoch  87 Batch   59/67   train_loss = 0.544
+Epoch  88 Batch   56/67   train_loss = 0.481
+Epoch  89 Batch   53/67   train_loss = 0.526
+Epoch  90 Batch   50/67   train_loss = 0.518
+Epoch  91 Batch   47/67   train_loss = 0.502
+Epoch  92 Batch   44/67   train_loss = 0.533
+Epoch  93 Batch   41/67   train_loss = 0.506
+Epoch  94 Batch   38/67   train_loss = 0.492
+Epoch  95 Batch   35/67   train_loss = 0.522
+Epoch  96 Batch   32/67   train_loss = 0.516
+Epoch  97 Batch   29/67   train_loss = 0.484
+Epoch  98 Batch   26/67   train_loss = 0.516
+Epoch  99 Batch   23/67   train_loss = 0.518
+Model Trained and Saved
 </pre>
 </div>
 </div>
@@ -12825,7 +12797,7 @@ InvalidArgumentError (see above for traceback): indices[33,5] = 6779 is not in [
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12851,7 +12823,7 @@ InvalidArgumentError (see above for traceback): indices[33,5] = 6779 is not in [
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12890,7 +12862,7 @@ InvalidArgumentError (see above for traceback): indices[33,5] = 6779 is not in [
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[198]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_tensors</span><span class="p">(</span><span class="n">loaded_graph</span><span class="p">):</span>
@@ -12945,7 +12917,7 @@ InvalidArgumentError (see above for traceback): indices[33,5] = 6779 is not in [
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[199]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">pick_word</span><span class="p">(</span><span class="n">probabilities</span><span class="p">,</span> <span class="n">int_to_vocab</span><span class="p">):</span>
@@ -12998,7 +12970,7 @@ InvalidArgumentError (see above for traceback): indices[33,5] = 6779 is not in [
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">gen_length</span> <span class="o">=</span> <span class="mi">200</span>
@@ -13048,6 +13020,31 @@ InvalidArgumentError (see above for traceback): indices[33,5] = 6779 is not in [
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>moe_szyslak: hey, just a sec, i&#39;ll check it up.
+moe_szyslak: just can&#39;t the cops. i have a hundred and thirty million dollars.
+moe_szyslak:(singing) hello, ma a little one, i love your name.
+homer_simpson:(surprised) what it was the money?
+moe_szyslak: oh, this is bad. i&#39;m getting drunk.
+barney_gumble: uh, i am i kiddin&#39;? i love your money.
+manjula_nahasapeemapetilon: hey, who am i yesterday.
+moe_szyslak: homer, lenny... my bar&#39;s twenty-two., it won&#39;t blame just that... i&#39;m laughing wanted to paris.
+homer_simpson: all right, is guys, moe? you need your strong thing.
+moe_szyslak:(holding two-thirds-empty beer) oh, it got your cash, as a d with my eggs up. now i&#39;m gonna make the sun move of the sports drive.&#34;
+moe_szyslak: well, if you take that bottle into my friend.
+barney_gumble: and the lizard and a little miss springfield pageant. but uh, let me take the
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
