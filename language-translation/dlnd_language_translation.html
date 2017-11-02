@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>dlnd_language_translation</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>dlnd_language_translation</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11,8 +13,8 @@
 *
 */
 /*!
- * Bootstrap v3.3.7 (http://getbootstrap.com)
- * Copyright 2011-2016 Twitter, Inc.
+ * Bootstrap v3.3.6 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -1107,6 +1109,7 @@ a:focus {
   text-decoration: underline;
 }
 a:focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -2535,6 +2538,7 @@ select[size] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -3025,6 +3029,7 @@ select[multiple].input-lg {
 .btn.focus,
 .btn:active.focus,
 .btn.active.focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -8755,9 +8760,6 @@ body > #header .header-bar {
     margin-left: 10px;
   }
 }
-[dir="rtl"] #ipython_notebook {
-  float: right !important;
-}
 #noscript {
   width: auto;
   padding-top: 16px;
@@ -8960,14 +8962,8 @@ span#login_widget > .button .badge,
  *
  * Author: Jupyter Development Team
  */
-[dir="rtl"] #tabs li {
-  float: right;
-}
 ul#tabs {
   margin-bottom: 4px;
-}
-[dir="rtl"] ul#tabs {
-  margin-right: 0px;
 }
 ul#tabs a {
   padding-top: 6px;
@@ -8990,16 +8986,6 @@ ul.breadcrumb span {
 }
 .list_toolbar .tree-buttons {
   padding-top: 1px;
-}
-[dir="rtl"] .list_toolbar .tree-buttons {
-  float: left !important;
-}
-[dir="rtl"] .list_toolbar .pull-right {
-  padding-top: 1px;
-  float: left !important;
-}
-[dir="rtl"] .list_toolbar .pull-left {
-  float: right !important;
 }
 .dynamic-buttons {
   padding-top: 3px;
@@ -9136,9 +9122,6 @@ ul.breadcrumb span {
 #tree-selector {
   padding-right: 0px;
 }
-[dir="rtl"] #tree-selector a {
-  float: right;
-}
 #button-select-all {
   min-width: 50px;
 }
@@ -9228,9 +9211,6 @@ ul#new-menu {
   left: auto;
   right: 0;
 }
-[dir="rtl"] #new-menu {
-  text-align: right;
-}
 .kernel-menu-icon {
   padding-right: 12px;
   width: 24px;
@@ -9275,9 +9255,6 @@ ul#new-menu {
 }
 #running .panel-group .panel .panel-body .list_container .list_item:last-child {
   border-bottom: 0px;
-}
-[dir="rtl"] #running .col-sm-8 {
-  float: right !important;
 }
 .delete-button {
   display: none;
@@ -9574,7 +9551,6 @@ div.cell.selected.jupyter-soft-selected {
   }
 }
 div.inner_cell {
-  min-width: 0;
   /* Old browsers */
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -9595,6 +9571,11 @@ div.inner_cell {
   box-flex: 1;
   /* Modern browsers */
   flex: 1;
+}
+@-moz-document url-prefix() {
+  div.inner_cell {
+    overflow-x: hidden;
+  }
 }
 /* input_area and input_prompt must match in top border and margin for alignment */
 div.input_area {
@@ -11265,7 +11246,7 @@ div#pager .ui-resizable-handle::after {
 }
 .shortcut_key {
   display: inline-block;
-  width: 21ex;
+  width: 20ex;
   text-align: right;
   font-family: monospace;
 }
@@ -11577,7 +11558,6 @@ ul.typeahead-list > li > a {
   box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
 }
 .terminal-app .terminal {
-  width: 100%;
   float: left;
   font-family: monospace;
   color: white;
@@ -11591,9 +11571,6 @@ ul.typeahead-list > li > a {
 .terminal-app .terminal dummy-screen {
   line-height: 1em;
   font-size: 14px;
-}
-.terminal-app .terminal .xterm-rows {
-  padding: 10px;
 }
 .terminal-app .terminal-cursor {
   color: black;
@@ -11654,10 +11631,8 @@ ul.typeahead-list > li > a {
 .highlight .mh { color: #666666 } /* Literal.Number.Hex */
 .highlight .mi { color: #666666 } /* Literal.Number.Integer */
 .highlight .mo { color: #666666 } /* Literal.Number.Oct */
-.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
 .highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
 .highlight .sc { color: #BA2121 } /* Literal.String.Char */
-.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
 .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
 .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
 .highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
@@ -11668,11 +11643,9 @@ ul.typeahead-list > li > a {
 .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
 .highlight .ss { color: #19177C } /* Literal.String.Symbol */
 .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
-.highlight .fm { color: #0000FF } /* Name.Function.Magic */
 .highlight .vc { color: #19177C } /* Name.Variable.Class */
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
-.highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
@@ -11726,7 +11699,9 @@ body {
 div#notebook {
   overflow: visible;
   border-top: none;
-}@media print {
+}
+
+@media print {
   div.cell {
     display: block;
     page-break-inside: avoid;
@@ -11747,7 +11722,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -11771,7 +11746,8 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11783,7 +11759,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[83]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -11803,7 +11779,8 @@ div#notebook {
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11814,7 +11791,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[84]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">view_sentence_range</span> <span class="o">=</span> <span class="p">(</span><span class="mi">22</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
@@ -11848,11 +11825,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Dataset Stats
 Roughly the number of unique words: 227
@@ -11890,7 +11863,8 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11905,7 +11879,7 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[85]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">text_to_ids</span><span class="p">(</span><span class="n">source_text</span><span class="p">,</span> <span class="n">target_text</span><span class="p">,</span> <span class="n">source_vocab_to_int</span><span class="p">,</span> <span class="n">target_vocab_to_int</span><span class="p">):</span>
@@ -11961,11 +11935,7 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Tests Passed
 </pre>
@@ -11976,7 +11946,8 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11987,7 +11958,7 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[86]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12001,7 +11972,8 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12012,7 +11984,7 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[87]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12030,7 +12002,8 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12041,7 +12014,7 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[88]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12071,25 +12044,16 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>TensorFlow Version: 1.3.0
 </pre>
 </div>
 </div>
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>/usr/local/lib/python3.5/dist-packages/ipykernel_launcher.py:15: UserWarning: No GPU found. Please use a GPU to train your neural network.
-  from ipykernel import kernelapp as app
+<pre>/home/kapy/anaconda3/envs/dlnd-tf-lab/lib/python3.5/site-packages/ipykernel/__main__.py:15: UserWarning: No GPU found. Please use a GPU to train your neural network.
 </pre>
 </div>
 </div>
@@ -12098,7 +12062,8 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12129,7 +12094,7 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[89]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">model_inputs</span><span class="p">():</span>
@@ -12164,11 +12129,7 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Tests Passed
 </pre>
@@ -12179,7 +12140,8 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12190,7 +12152,7 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[90]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">process_decoder_input</span><span class="p">(</span><span class="n">target_data</span><span class="p">,</span> <span class="n">target_vocab_to_int</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">):</span>
@@ -12221,11 +12183,7 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Tests Passed
 </pre>
@@ -12236,7 +12194,8 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12252,7 +12211,7 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[96]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">imp</span> <span class="k">import</span> <span class="n">reload</span>
@@ -12301,11 +12260,7 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Tests Passed
 </pre>
@@ -12316,7 +12271,8 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12332,7 +12288,7 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[92]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">decoding_layer_train</span><span class="p">(</span><span class="n">encoder_state</span><span class="p">,</span> <span class="n">dec_cell</span><span class="p">,</span> <span class="n">dec_embed_input</span><span class="p">,</span> 
@@ -12379,11 +12335,7 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Tests Passed
 </pre>
@@ -12394,7 +12346,8 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12410,7 +12363,7 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[93]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">decoding_layer_infer</span><span class="p">(</span><span class="n">encoder_state</span><span class="p">,</span> <span class="n">dec_cell</span><span class="p">,</span> <span class="n">dec_embeddings</span><span class="p">,</span> <span class="n">start_of_sequence_id</span><span class="p">,</span>
@@ -12462,11 +12415,7 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Tests Passed
 </pre>
@@ -12477,7 +12426,8 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12496,7 +12446,7 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[100]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">decoding_layer</span><span class="p">(</span><span class="n">dec_input</span><span class="p">,</span> <span class="n">encoder_state</span><span class="p">,</span>
@@ -12532,7 +12482,7 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 
     <span class="n">dec_cell</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">rnn</span><span class="o">.</span><span class="n">MultiRNNCell</span><span class="p">([</span><span class="n">make_cell2</span><span class="p">(</span><span class="n">rnn_size</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_layers</span><span class="p">)])</span>
     
-    <span class="n">dec_output</span><span class="p">,</span> <span class="n">dec_state</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">dynamic_rnn</span><span class="p">(</span><span class="n">dec_cell</span><span class="p">,</span> <span class="n">dec_embed_input</span><span class="p">,</span> <span class="n">sequence_length</span><span class="o">=</span><span class="n">target_sequence_length</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+    <span class="n">dec_output</span><span class="p">,</span> <span class="n">dec_state</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">dynamic_rnn</span><span class="p">(</span><span class="n">dec_cell</span><span class="p">,</span> <span class="n">dec_embed_input</span><span class="p">,</span> <span class="n">sequence_length</span><span class="o">=</span><span class="n">target_sequence_length</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">scope</span><span class="o">=</span><span class="s2">&quot;decode&quot;</span><span class="p">)</span>
 
     <span class="n">output_layer</span> <span class="o">=</span> <span class="n">Dense</span><span class="p">(</span><span class="n">target_vocab_size</span><span class="p">,</span>
                          <span class="n">kernel_initializer</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">truncated_normal_initializer</span><span class="p">(</span><span class="n">mean</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">stddev</span><span class="o">=</span><span class="mf">0.1</span><span class="p">))</span>
@@ -12563,11 +12513,7 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Tests Passed
 </pre>
@@ -12578,7 +12524,8 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12594,7 +12541,7 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[115]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">seq2seq_model</span><span class="p">(</span><span class="n">input_data</span><span class="p">,</span> <span class="n">target_data</span><span class="p">,</span> <span class="n">keep_prob</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">,</span>
@@ -12648,217 +12595,9 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-115-9ef39713a0cf&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     39</span> DON<span class="ansi-red-fg">&#39;</span>T MODIFY ANYTHING IN THIS CELL THAT IS BELOW THIS LINE
-<span class="ansi-green-intense-fg ansi-bold">     40</span> &#34;&#34;&#34;
-<span class="ansi-green-fg">---&gt; 41</span><span class="ansi-red-fg"> </span>tests<span class="ansi-blue-fg">.</span>test_seq2seq_model<span class="ansi-blue-fg">(</span>seq2seq_model<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/deep-learning/language-translation/problem_unittests.py</span> in <span class="ansi-cyan-fg">test_seq2seq_model</span><span class="ansi-blue-fg">(seq2seq_model)</span>
-<span class="ansi-green-intense-fg ansi-bold">    243</span>                                                    rnn_size<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">    244</span>                                                    num_layers<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-fg">--&gt; 245</span><span class="ansi-red-fg">                                                    target_vocab_to_int)
-</span><span class="ansi-green-intense-fg ansi-bold">    246</span> 
-<span class="ansi-green-intense-fg ansi-bold">    247</span>         <span class="ansi-red-fg"># input_data, target_data, keep_prob, batch_size, sequence_length,</span>
-
-<span class="ansi-green-fg">&lt;ipython-input-115-9ef39713a0cf&gt;</span> in <span class="ansi-cyan-fg">seq2seq_model</span><span class="ansi-blue-fg">(input_data, target_data, keep_prob, batch_size, source_sequence_length, target_sequence_length, max_target_sentence_length, source_vocab_size, target_vocab_size, enc_embedding_size, dec_embedding_size, rnn_size, num_layers, target_vocab_to_int)</span>
-<span class="ansi-green-intense-fg ansi-bold">     31</span>                                                                        max_target_sentence_length<span class="ansi-blue-fg">,</span> rnn_size<span class="ansi-blue-fg">,</span> num_layers<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">     32</span>                                                                        target_vocab_to_int<span class="ansi-blue-fg">,</span> target_vocab_size<span class="ansi-blue-fg">,</span> batch_size<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-fg">---&gt; 33</span><span class="ansi-red-fg">                                                                        keep_prob, dec_embedding_size)
-</span><span class="ansi-green-intense-fg ansi-bold">     34</span> 
-<span class="ansi-green-intense-fg ansi-bold">     35</span>     <span class="ansi-green-fg">return</span> training_decoder_output<span class="ansi-blue-fg">,</span> inference_decoder_output
-
-<span class="ansi-green-fg">&lt;ipython-input-100-edd668b97b8a&gt;</span> in <span class="ansi-cyan-fg">decoding_layer</span><span class="ansi-blue-fg">(dec_input, encoder_state, target_sequence_length, max_target_sequence_length, rnn_size, num_layers, target_vocab_to_int, target_vocab_size, batch_size, keep_prob, decoding_embedding_size)</span>
-<span class="ansi-green-intense-fg ansi-bold">     32</span>     dec_cell <span class="ansi-blue-fg">=</span> tf<span class="ansi-blue-fg">.</span>contrib<span class="ansi-blue-fg">.</span>rnn<span class="ansi-blue-fg">.</span>MultiRNNCell<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span>make_cell2<span class="ansi-blue-fg">(</span>rnn_size<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> _ <span class="ansi-green-fg">in</span> range<span class="ansi-blue-fg">(</span>num_layers<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     33</span> 
-<span class="ansi-green-fg">---&gt; 34</span><span class="ansi-red-fg">     </span>dec_output<span class="ansi-blue-fg">,</span> dec_state <span class="ansi-blue-fg">=</span> tf<span class="ansi-blue-fg">.</span>nn<span class="ansi-blue-fg">.</span>dynamic_rnn<span class="ansi-blue-fg">(</span>dec_cell<span class="ansi-blue-fg">,</span> dec_embed_input<span class="ansi-blue-fg">,</span> sequence_length<span class="ansi-blue-fg">=</span>target_sequence_length<span class="ansi-blue-fg">,</span> dtype<span class="ansi-blue-fg">=</span>tf<span class="ansi-blue-fg">.</span>float32<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     35</span> 
-<span class="ansi-green-intense-fg ansi-bold">     36</span>     output_layer = Dense(target_vocab_size,
-
-<span class="ansi-green-fg">/usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/rnn.py</span> in <span class="ansi-cyan-fg">dynamic_rnn</span><span class="ansi-blue-fg">(cell, inputs, sequence_length, initial_state, dtype, parallel_iterations, swap_memory, time_major, scope)</span>
-<span class="ansi-green-intense-fg ansi-bold">    596</span>         swap_memory<span class="ansi-blue-fg">=</span>swap_memory<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">    597</span>         sequence_length<span class="ansi-blue-fg">=</span>sequence_length<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-fg">--&gt; 598</span><span class="ansi-red-fg">         dtype=dtype)
-</span><span class="ansi-green-intense-fg ansi-bold">    599</span> 
-<span class="ansi-green-intense-fg ansi-bold">    600</span>     <span class="ansi-red-fg"># Outputs of _dynamic_rnn_loop are always shaped [time, batch, depth].</span>
-
-<span class="ansi-green-fg">/usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/rnn.py</span> in <span class="ansi-cyan-fg">_dynamic_rnn_loop</span><span class="ansi-blue-fg">(cell, inputs, initial_state, parallel_iterations, swap_memory, sequence_length, dtype)</span>
-<span class="ansi-green-intense-fg ansi-bold">    759</span>       loop_vars<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">(</span>time<span class="ansi-blue-fg">,</span> output_ta<span class="ansi-blue-fg">,</span> state<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">    760</span>       parallel_iterations<span class="ansi-blue-fg">=</span>parallel_iterations<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-fg">--&gt; 761</span><span class="ansi-red-fg">       swap_memory=swap_memory)
-</span><span class="ansi-green-intense-fg ansi-bold">    762</span> 
-<span class="ansi-green-intense-fg ansi-bold">    763</span>   <span class="ansi-red-fg"># Unpack final output if not using output tuples.</span>
-
-<span class="ansi-green-fg">/usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/control_flow_ops.py</span> in <span class="ansi-cyan-fg">while_loop</span><span class="ansi-blue-fg">(cond, body, loop_vars, shape_invariants, parallel_iterations, back_prop, swap_memory, name)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2773</span>     context <span class="ansi-blue-fg">=</span> WhileContext<span class="ansi-blue-fg">(</span>parallel_iterations<span class="ansi-blue-fg">,</span> back_prop<span class="ansi-blue-fg">,</span> swap_memory<span class="ansi-blue-fg">,</span> name<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2774</span>     ops<span class="ansi-blue-fg">.</span>add_to_collection<span class="ansi-blue-fg">(</span>ops<span class="ansi-blue-fg">.</span>GraphKeys<span class="ansi-blue-fg">.</span>WHILE_CONTEXT<span class="ansi-blue-fg">,</span> context<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">-&gt; 2775</span><span class="ansi-red-fg">     </span>result <span class="ansi-blue-fg">=</span> context<span class="ansi-blue-fg">.</span>BuildLoop<span class="ansi-blue-fg">(</span>cond<span class="ansi-blue-fg">,</span> body<span class="ansi-blue-fg">,</span> loop_vars<span class="ansi-blue-fg">,</span> shape_invariants<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2776</span>     <span class="ansi-green-fg">return</span> result
-<span class="ansi-green-intense-fg ansi-bold">   2777</span> 
-
-<span class="ansi-green-fg">/usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/control_flow_ops.py</span> in <span class="ansi-cyan-fg">BuildLoop</span><span class="ansi-blue-fg">(self, pred, body, loop_vars, shape_invariants)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2602</span>       self<span class="ansi-blue-fg">.</span>Enter<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2603</span>       original_body_result, exit_vars = self._BuildLoop(
-<span class="ansi-green-fg">-&gt; 2604</span><span class="ansi-red-fg">           pred, body, original_loop_vars, loop_vars, shape_invariants)
-</span><span class="ansi-green-intense-fg ansi-bold">   2605</span>     <span class="ansi-green-fg">finally</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   2606</span>       self<span class="ansi-blue-fg">.</span>Exit<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">/usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/control_flow_ops.py</span> in <span class="ansi-cyan-fg">_BuildLoop</span><span class="ansi-blue-fg">(self, pred, body, original_loop_vars, loop_vars, shape_invariants)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2552</span>         structure<span class="ansi-blue-fg">=</span>original_loop_vars<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">   2553</span>         flat_sequence=vars_for_body_with_tensor_arrays)
-<span class="ansi-green-fg">-&gt; 2554</span><span class="ansi-red-fg">     </span>body_result <span class="ansi-blue-fg">=</span> body<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>packed_vars_for_body<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2555</span>     <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> nest<span class="ansi-blue-fg">.</span>is_sequence<span class="ansi-blue-fg">(</span>body_result<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   2556</span>       body_result <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span>body_result<span class="ansi-blue-fg">]</span>
-
-<span class="ansi-green-fg">/usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/rnn.py</span> in <span class="ansi-cyan-fg">_time_step</span><span class="ansi-blue-fg">(time, output_ta_t, state)</span>
-<span class="ansi-green-intense-fg ansi-bold">    742</span>           call_cell<span class="ansi-blue-fg">=</span>call_cell<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">    743</span>           state_size<span class="ansi-blue-fg">=</span>state_size<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-fg">--&gt; 744</span><span class="ansi-red-fg">           skip_conditionals=True)
-</span><span class="ansi-green-intense-fg ansi-bold">    745</span>     <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    746</span>       <span class="ansi-blue-fg">(</span>output<span class="ansi-blue-fg">,</span> new_state<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">=</span> call_cell<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">/usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/rnn.py</span> in <span class="ansi-cyan-fg">_rnn_step</span><span class="ansi-blue-fg">(time, sequence_length, min_sequence_length, max_sequence_length, zero_output, state, call_cell, state_size, skip_conditionals)</span>
-<span class="ansi-green-intense-fg ansi-bold">    234</span>     <span class="ansi-red-fg"># steps.  This is faster when max_seq_len is equal to the number of unrolls</span>
-<span class="ansi-green-intense-fg ansi-bold">    235</span>     <span class="ansi-red-fg"># (which is typical for dynamic_rnn).</span>
-<span class="ansi-green-fg">--&gt; 236</span><span class="ansi-red-fg">     </span>new_output<span class="ansi-blue-fg">,</span> new_state <span class="ansi-blue-fg">=</span> call_cell<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    237</span>     nest<span class="ansi-blue-fg">.</span>assert_same_structure<span class="ansi-blue-fg">(</span>state<span class="ansi-blue-fg">,</span> new_state<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    238</span>     new_state <span class="ansi-blue-fg">=</span> nest<span class="ansi-blue-fg">.</span>flatten<span class="ansi-blue-fg">(</span>new_state<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">/usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/rnn.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">    730</span> 
-<span class="ansi-green-intense-fg ansi-bold">    731</span>     input_t <span class="ansi-blue-fg">=</span> nest<span class="ansi-blue-fg">.</span>pack_sequence_as<span class="ansi-blue-fg">(</span>structure<span class="ansi-blue-fg">=</span>inputs<span class="ansi-blue-fg">,</span> flat_sequence<span class="ansi-blue-fg">=</span>input_t<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">--&gt; 732</span><span class="ansi-red-fg">     </span>call_cell <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span><span class="ansi-blue-fg">:</span> cell<span class="ansi-blue-fg">(</span>input_t<span class="ansi-blue-fg">,</span> state<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    733</span> 
-<span class="ansi-green-intense-fg ansi-bold">    734</span>     <span class="ansi-green-fg">if</span> sequence_length <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">/usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/rnn_cell_impl.py</span> in <span class="ansi-cyan-fg">__call__</span><span class="ansi-blue-fg">(self, inputs, state, scope)</span>
-<span class="ansi-green-intense-fg ansi-bold">    178</span>       with vs.variable_scope(vs.get_variable_scope(),
-<span class="ansi-green-intense-fg ansi-bold">    179</span>                              custom_getter=self._rnn_get_variable):
-<span class="ansi-green-fg">--&gt; 180</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> super<span class="ansi-blue-fg">(</span>RNNCell<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>__call__<span class="ansi-blue-fg">(</span>inputs<span class="ansi-blue-fg">,</span> state<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    181</span> 
-<span class="ansi-green-intense-fg ansi-bold">    182</span>   <span class="ansi-green-fg">def</span> _rnn_get_variable<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> getter<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">/usr/local/lib/python3.5/dist-packages/tensorflow/python/layers/base.py</span> in <span class="ansi-cyan-fg">__call__</span><span class="ansi-blue-fg">(self, inputs, *args, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">    448</span>         <span class="ansi-red-fg"># Check input assumptions set after layer building, e.g. input shape.</span>
-<span class="ansi-green-intense-fg ansi-bold">    449</span>         self<span class="ansi-blue-fg">.</span>_assert_input_compatibility<span class="ansi-blue-fg">(</span>inputs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">--&gt; 450</span><span class="ansi-red-fg">         </span>outputs <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>call<span class="ansi-blue-fg">(</span>inputs<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    451</span> 
-<span class="ansi-green-intense-fg ansi-bold">    452</span>         <span class="ansi-red-fg"># Apply activity regularization.</span>
-
-<span class="ansi-green-fg">/usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/rnn_cell_impl.py</span> in <span class="ansi-cyan-fg">call</span><span class="ansi-blue-fg">(self, inputs, state)</span>
-<span class="ansi-green-intense-fg ansi-bold">    936</span>                                       [-1, cell.state_size])
-<span class="ansi-green-intense-fg ansi-bold">    937</span>           cur_state_pos <span class="ansi-blue-fg">+=</span> cell<span class="ansi-blue-fg">.</span>state_size
-<span class="ansi-green-fg">--&gt; 938</span><span class="ansi-red-fg">         </span>cur_inp<span class="ansi-blue-fg">,</span> new_state <span class="ansi-blue-fg">=</span> cell<span class="ansi-blue-fg">(</span>cur_inp<span class="ansi-blue-fg">,</span> cur_state<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    939</span>         new_states<span class="ansi-blue-fg">.</span>append<span class="ansi-blue-fg">(</span>new_state<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    940</span> 
-
-<span class="ansi-green-fg">/usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/rnn_cell_impl.py</span> in <span class="ansi-cyan-fg">__call__</span><span class="ansi-blue-fg">(self, inputs, state, scope)</span>
-<span class="ansi-green-intense-fg ansi-bold">    772</span>                              self<span class="ansi-blue-fg">.</span>_recurrent_input_noise<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">    773</span>                              self._input_keep_prob)
-<span class="ansi-green-fg">--&gt; 774</span><span class="ansi-red-fg">     </span>output<span class="ansi-blue-fg">,</span> new_state <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_cell<span class="ansi-blue-fg">(</span>inputs<span class="ansi-blue-fg">,</span> state<span class="ansi-blue-fg">,</span> scope<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    775</span>     <span class="ansi-green-fg">if</span> _should_dropout<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>_state_keep_prob<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    776</span>       new_state = self._dropout(new_state, &#34;state&#34;,
-
-<span class="ansi-green-fg">/usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/rnn_cell_impl.py</span> in <span class="ansi-cyan-fg">__call__</span><span class="ansi-blue-fg">(self, inputs, state, scope)</span>
-<span class="ansi-green-intense-fg ansi-bold">    178</span>       with vs.variable_scope(vs.get_variable_scope(),
-<span class="ansi-green-intense-fg ansi-bold">    179</span>                              custom_getter=self._rnn_get_variable):
-<span class="ansi-green-fg">--&gt; 180</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> super<span class="ansi-blue-fg">(</span>RNNCell<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>__call__<span class="ansi-blue-fg">(</span>inputs<span class="ansi-blue-fg">,</span> state<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    181</span> 
-<span class="ansi-green-intense-fg ansi-bold">    182</span>   <span class="ansi-green-fg">def</span> _rnn_get_variable<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> getter<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">/usr/local/lib/python3.5/dist-packages/tensorflow/python/layers/base.py</span> in <span class="ansi-cyan-fg">__call__</span><span class="ansi-blue-fg">(self, inputs, *args, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">    448</span>         <span class="ansi-red-fg"># Check input assumptions set after layer building, e.g. input shape.</span>
-<span class="ansi-green-intense-fg ansi-bold">    449</span>         self<span class="ansi-blue-fg">.</span>_assert_input_compatibility<span class="ansi-blue-fg">(</span>inputs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">--&gt; 450</span><span class="ansi-red-fg">         </span>outputs <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>call<span class="ansi-blue-fg">(</span>inputs<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    451</span> 
-<span class="ansi-green-intense-fg ansi-bold">    452</span>         <span class="ansi-red-fg"># Apply activity regularization.</span>
-
-<span class="ansi-green-fg">/usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/rnn_cell_impl.py</span> in <span class="ansi-cyan-fg">call</span><span class="ansi-blue-fg">(self, inputs, state)</span>
-<span class="ansi-green-intense-fg ansi-bold">    562</span>                 self._num_unit_shards))
-<span class="ansi-green-intense-fg ansi-bold">    563</span>       <span class="ansi-red-fg"># i = input_gate, j = new_input, f = forget_gate, o = output_gate</span>
-<span class="ansi-green-fg">--&gt; 564</span><span class="ansi-red-fg">       </span>lstm_matrix <span class="ansi-blue-fg">=</span> _linear<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span>inputs<span class="ansi-blue-fg">,</span> m_prev<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">4</span> <span class="ansi-blue-fg">*</span> self<span class="ansi-blue-fg">.</span>_num_units<span class="ansi-blue-fg">,</span> bias<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">True</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    565</span>       i, j, f, o = array_ops.split(
-<span class="ansi-green-intense-fg ansi-bold">    566</span>           value=lstm_matrix, num_or_size_splits=4, axis=1)
-
-<span class="ansi-green-fg">/usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/rnn_cell_impl.py</span> in <span class="ansi-cyan-fg">_linear</span><span class="ansi-blue-fg">(args, output_size, bias, bias_initializer, kernel_initializer)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1037</span>         _WEIGHTS_VARIABLE_NAME<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">[</span>total_arg_size<span class="ansi-blue-fg">,</span> output_size<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">   1038</span>         dtype<span class="ansi-blue-fg">=</span>dtype<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-fg">-&gt; 1039</span><span class="ansi-red-fg">         initializer=kernel_initializer)
-</span><span class="ansi-green-intense-fg ansi-bold">   1040</span>     <span class="ansi-green-fg">if</span> len<span class="ansi-blue-fg">(</span>args<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">==</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   1041</span>       res <span class="ansi-blue-fg">=</span> math_ops<span class="ansi-blue-fg">.</span>matmul<span class="ansi-blue-fg">(</span>args<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> weights<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">/usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/variable_scope.py</span> in <span class="ansi-cyan-fg">get_variable</span><span class="ansi-blue-fg">(name, shape, dtype, initializer, regularizer, trainable, collections, caching_device, partitioner, validate_shape, use_resource, custom_getter)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1063</span>       collections<span class="ansi-blue-fg">=</span>collections<span class="ansi-blue-fg">,</span> caching_device<span class="ansi-blue-fg">=</span>caching_device<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">   1064</span>       partitioner<span class="ansi-blue-fg">=</span>partitioner<span class="ansi-blue-fg">,</span> validate_shape<span class="ansi-blue-fg">=</span>validate_shape<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-fg">-&gt; 1065</span><span class="ansi-red-fg">       use_resource=use_resource, custom_getter=custom_getter)
-</span><span class="ansi-green-intense-fg ansi-bold">   1066</span> get_variable_or_local_docstring = (
-<span class="ansi-green-intense-fg ansi-bold">   1067</span>     &#34;&#34;&#34;%s
-
-<span class="ansi-green-fg">/usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/variable_scope.py</span> in <span class="ansi-cyan-fg">get_variable</span><span class="ansi-blue-fg">(self, var_store, name, shape, dtype, initializer, regularizer, reuse, trainable, collections, caching_device, partitioner, validate_shape, use_resource, custom_getter)</span>
-<span class="ansi-green-intense-fg ansi-bold">    960</span>           collections<span class="ansi-blue-fg">=</span>collections<span class="ansi-blue-fg">,</span> caching_device<span class="ansi-blue-fg">=</span>caching_device<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">    961</span>           partitioner<span class="ansi-blue-fg">=</span>partitioner<span class="ansi-blue-fg">,</span> validate_shape<span class="ansi-blue-fg">=</span>validate_shape<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-fg">--&gt; 962</span><span class="ansi-red-fg">           use_resource=use_resource, custom_getter=custom_getter)
-</span><span class="ansi-green-intense-fg ansi-bold">    963</span> 
-<span class="ansi-green-intense-fg ansi-bold">    964</span>   def _get_partitioned_variable(self,
-
-<span class="ansi-green-fg">/usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/variable_scope.py</span> in <span class="ansi-cyan-fg">get_variable</span><span class="ansi-blue-fg">(self, name, shape, dtype, initializer, regularizer, reuse, trainable, collections, caching_device, partitioner, validate_shape, use_resource, custom_getter)</span>
-<span class="ansi-green-intense-fg ansi-bold">    358</span>           reuse<span class="ansi-blue-fg">=</span>reuse<span class="ansi-blue-fg">,</span> trainable<span class="ansi-blue-fg">=</span>trainable<span class="ansi-blue-fg">,</span> collections<span class="ansi-blue-fg">=</span>collections<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">    359</span>           caching_device<span class="ansi-blue-fg">=</span>caching_device<span class="ansi-blue-fg">,</span> partitioner<span class="ansi-blue-fg">=</span>partitioner<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-fg">--&gt; 360</span><span class="ansi-red-fg">           validate_shape=validate_shape, use_resource=use_resource)
-</span><span class="ansi-green-intense-fg ansi-bold">    361</span>     <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    362</span>       return _true_getter(
-
-<span class="ansi-green-fg">/usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/variable_scope.py</span> in <span class="ansi-cyan-fg">wrapped_custom_getter</span><span class="ansi-blue-fg">(getter, *args, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1403</span>     return custom_getter(
-<span class="ansi-green-intense-fg ansi-bold">   1404</span>         functools<span class="ansi-blue-fg">.</span>partial<span class="ansi-blue-fg">(</span>old_getter<span class="ansi-blue-fg">,</span> getter<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span>
-<span class="ansi-green-fg">-&gt; 1405</span><span class="ansi-red-fg">         *args, **kwargs)
-</span><span class="ansi-green-intense-fg ansi-bold">   1406</span>   <span class="ansi-green-fg">return</span> wrapped_custom_getter
-<span class="ansi-green-intense-fg ansi-bold">   1407</span> 
-
-<span class="ansi-green-fg">/usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/rnn_cell_impl.py</span> in <span class="ansi-cyan-fg">_rnn_get_variable</span><span class="ansi-blue-fg">(self, getter, *args, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">    181</span> 
-<span class="ansi-green-intense-fg ansi-bold">    182</span>   <span class="ansi-green-fg">def</span> _rnn_get_variable<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> getter<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 183</span><span class="ansi-red-fg">     </span>variable <span class="ansi-blue-fg">=</span> getter<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    184</span>     trainable = (variable in tf_variables.trainable_variables() or
-<span class="ansi-green-intense-fg ansi-bold">    185</span>                  (isinstance(variable, tf_variables.PartitionedVariable) and
-
-<span class="ansi-green-fg">/usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/rnn_cell_impl.py</span> in <span class="ansi-cyan-fg">_rnn_get_variable</span><span class="ansi-blue-fg">(self, getter, *args, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">    181</span> 
-<span class="ansi-green-intense-fg ansi-bold">    182</span>   <span class="ansi-green-fg">def</span> _rnn_get_variable<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> getter<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 183</span><span class="ansi-red-fg">     </span>variable <span class="ansi-blue-fg">=</span> getter<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    184</span>     trainable = (variable in tf_variables.trainable_variables() or
-<span class="ansi-green-intense-fg ansi-bold">    185</span>                  (isinstance(variable, tf_variables.PartitionedVariable) and
-
-<span class="ansi-green-fg">/usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/variable_scope.py</span> in <span class="ansi-cyan-fg">_true_getter</span><span class="ansi-blue-fg">(name, shape, dtype, initializer, regularizer, reuse, trainable, collections, caching_device, partitioner, validate_shape, use_resource)</span>
-<span class="ansi-green-intense-fg ansi-bold">    350</span>           trainable<span class="ansi-blue-fg">=</span>trainable<span class="ansi-blue-fg">,</span> collections<span class="ansi-blue-fg">=</span>collections<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">    351</span>           caching_device<span class="ansi-blue-fg">=</span>caching_device<span class="ansi-blue-fg">,</span> validate_shape<span class="ansi-blue-fg">=</span>validate_shape<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-fg">--&gt; 352</span><span class="ansi-red-fg">           use_resource=use_resource)
-</span><span class="ansi-green-intense-fg ansi-bold">    353</span> 
-<span class="ansi-green-intense-fg ansi-bold">    354</span>     <span class="ansi-green-fg">if</span> custom_getter <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">/usr/local/lib/python3.5/dist-packages/tensorflow/python/ops/variable_scope.py</span> in <span class="ansi-cyan-fg">_get_single_variable</span><span class="ansi-blue-fg">(self, name, shape, dtype, initializer, regularizer, partition_info, reuse, trainable, collections, caching_device, validate_shape, use_resource)</span>
-<span class="ansi-green-intense-fg ansi-bold">    662</span>                          <span class="ansi-blue-fg">&#34; Did you mean to set reuse=True in VarScope? &#34;</span>
-<span class="ansi-green-intense-fg ansi-bold">    663</span>                          &#34;Originally defined at:\n\n%s&#34; % (
-<span class="ansi-green-fg">--&gt; 664</span><span class="ansi-red-fg">                              name, &#34;&#34;.join(traceback.format_list(tb))))
-</span><span class="ansi-green-intense-fg ansi-bold">    665</span>       found_var <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_vars<span class="ansi-blue-fg">[</span>name<span class="ansi-blue-fg">]</span>
-<span class="ansi-green-intense-fg ansi-bold">    666</span>       <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> shape<span class="ansi-blue-fg">.</span>is_compatible_with<span class="ansi-blue-fg">(</span>found_var<span class="ansi-blue-fg">.</span>get_shape<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-red-fg">ValueError</span>: Variable rnn/multi_rnn_cell/cell_0/lstm_cell/kernel already exists, disallowed. Did you mean to set reuse=True in VarScope? Originally defined at:
-
-  File &#34;&lt;ipython-input-96-456105452951&gt;&#34;, line 29, in encoding_layer
-    enc_output, enc_state = tf.nn.dynamic_rnn(enc_cell, enc_embed_input, sequence_length=source_sequence_length, dtype=tf.float32)
-  File &#34;&lt;ipython-input-115-9ef39713a0cf&gt;&#34;, line 26, in seq2seq_model
-    source_sequence_length, source_vocab_size, enc_embedding_size)
-  File &#34;/home/ubuntu/deep-learning/language-translation/problem_unittests.py&#34;, line 245, in test_seq2seq_model
-    target_vocab_to_int)
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Tests Passed
 </pre>
 </div>
 </div>
@@ -12867,7 +12606,8 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12889,11 +12629,11 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Number of Epochs</span>
-<span class="n">epochs</span> <span class="o">=</span> <span class="mi">60</span>
+<span class="n">epochs</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="c1"># Batch Size</span>
 <span class="n">batch_size</span> <span class="o">=</span> <span class="mi">128</span>
 <span class="c1"># RNN Size</span>
@@ -12906,8 +12646,8 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 <span class="c1"># Learning Rate</span>
 <span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.01</span>
 <span class="c1"># Dropout Keep Probability</span>
-<span class="n">keep_probability</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="n">display_step</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">keep_probability</span> <span class="o">=</span> <span class="mf">0.95</span>
+<span class="n">display_step</span> <span class="o">=</span> <span class="mi">50</span>
 </pre></div>
 
 </div>
@@ -12915,7 +12655,8 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12926,7 +12667,7 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12985,7 +12726,8 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12996,7 +12738,7 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -13038,7 +12780,8 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13049,7 +12792,7 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -13137,8 +12880,233 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Epoch   0 Batch   50/1077 - Train Accuracy: 0.3559, Validation Accuracy: 0.4180, Loss: 2.8851
+Epoch   0 Batch  100/1077 - Train Accuracy: 0.4469, Validation Accuracy: 0.4936, Loss: 2.2406
+Epoch   0 Batch  150/1077 - Train Accuracy: 0.4695, Validation Accuracy: 0.4766, Loss: 1.6662
+Epoch   0 Batch  200/1077 - Train Accuracy: 0.4176, Validation Accuracy: 0.5192, Loss: 1.3327
+Epoch   0 Batch  250/1077 - Train Accuracy: 0.4666, Validation Accuracy: 0.4869, Loss: 0.9768
+Epoch   0 Batch  300/1077 - Train Accuracy: 0.4618, Validation Accuracy: 0.5149, Loss: 0.9567
+Epoch   0 Batch  350/1077 - Train Accuracy: 0.4574, Validation Accuracy: 0.5334, Loss: 0.8635
+Epoch   0 Batch  400/1077 - Train Accuracy: 0.5023, Validation Accuracy: 0.5543, Loss: 0.7806
+Epoch   0 Batch  450/1077 - Train Accuracy: 0.5254, Validation Accuracy: 0.5465, Loss: 0.7229
+Epoch   0 Batch  500/1077 - Train Accuracy: 0.5555, Validation Accuracy: 0.5732, Loss: 0.7101
+Epoch   0 Batch  550/1077 - Train Accuracy: 0.5422, Validation Accuracy: 0.6168, Loss: 0.7190
+Epoch   0 Batch  600/1077 - Train Accuracy: 0.5941, Validation Accuracy: 0.6062, Loss: 0.6061
+Epoch   0 Batch  650/1077 - Train Accuracy: 0.5883, Validation Accuracy: 0.6211, Loss: 0.6349
+Epoch   0 Batch  700/1077 - Train Accuracy: 0.5355, Validation Accuracy: 0.5835, Loss: 0.6074
+Epoch   0 Batch  750/1077 - Train Accuracy: 0.6008, Validation Accuracy: 0.6175, Loss: 0.5757
+Epoch   0 Batch  800/1077 - Train Accuracy: 0.5938, Validation Accuracy: 0.6325, Loss: 0.5662
+Epoch   0 Batch  850/1077 - Train Accuracy: 0.6217, Validation Accuracy: 0.6268, Loss: 0.5651
+Epoch   0 Batch  900/1077 - Train Accuracy: 0.6516, Validation Accuracy: 0.6470, Loss: 0.5117
+Epoch   0 Batch  950/1077 - Train Accuracy: 0.6124, Validation Accuracy: 0.6523, Loss: 0.4765
+Epoch   0 Batch 1000/1077 - Train Accuracy: 0.6737, Validation Accuracy: 0.6484, Loss: 0.4399
+Epoch   0 Batch 1050/1077 - Train Accuracy: 0.5941, Validation Accuracy: 0.6438, Loss: 0.4771
+Epoch   1 Batch   50/1077 - Train Accuracy: 0.6520, Validation Accuracy: 0.6573, Loss: 0.4449
+Epoch   1 Batch  100/1077 - Train Accuracy: 0.6703, Validation Accuracy: 0.6811, Loss: 0.4253
+Epoch   1 Batch  150/1077 - Train Accuracy: 0.6979, Validation Accuracy: 0.6719, Loss: 0.3937
+Epoch   1 Batch  200/1077 - Train Accuracy: 0.6672, Validation Accuracy: 0.7028, Loss: 0.4018
+Epoch   1 Batch  250/1077 - Train Accuracy: 0.7109, Validation Accuracy: 0.7013, Loss: 0.3522
+Epoch   1 Batch  300/1077 - Train Accuracy: 0.7085, Validation Accuracy: 0.7134, Loss: 0.3619
+Epoch   1 Batch  350/1077 - Train Accuracy: 0.7098, Validation Accuracy: 0.7006, Loss: 0.3474
+Epoch   1 Batch  400/1077 - Train Accuracy: 0.7316, Validation Accuracy: 0.7234, Loss: 0.3474
+Epoch   1 Batch  450/1077 - Train Accuracy: 0.7246, Validation Accuracy: 0.7269, Loss: 0.3205
+Epoch   1 Batch  500/1077 - Train Accuracy: 0.7754, Validation Accuracy: 0.7337, Loss: 0.3236
+Epoch   1 Batch  550/1077 - Train Accuracy: 0.6980, Validation Accuracy: 0.7219, Loss: 0.3308
+Epoch   1 Batch  600/1077 - Train Accuracy: 0.7388, Validation Accuracy: 0.7528, Loss: 0.2855
+Epoch   1 Batch  650/1077 - Train Accuracy: 0.7133, Validation Accuracy: 0.7713, Loss: 0.2940
+Epoch   1 Batch  700/1077 - Train Accuracy: 0.8008, Validation Accuracy: 0.7543, Loss: 0.2653
+Epoch   1 Batch  750/1077 - Train Accuracy: 0.7941, Validation Accuracy: 0.7582, Loss: 0.2653
+Epoch   1 Batch  800/1077 - Train Accuracy: 0.7684, Validation Accuracy: 0.7873, Loss: 0.2505
+Epoch   1 Batch  850/1077 - Train Accuracy: 0.7359, Validation Accuracy: 0.7930, Loss: 0.2798
+Epoch   1 Batch  900/1077 - Train Accuracy: 0.8137, Validation Accuracy: 0.7816, Loss: 0.2546
+Epoch   1 Batch  950/1077 - Train Accuracy: 0.8151, Validation Accuracy: 0.7496, Loss: 0.2282
+Epoch   1 Batch 1000/1077 - Train Accuracy: 0.8549, Validation Accuracy: 0.8164, Loss: 0.1980
+Epoch   1 Batch 1050/1077 - Train Accuracy: 0.7797, Validation Accuracy: 0.7834, Loss: 0.2079
+Epoch   2 Batch   50/1077 - Train Accuracy: 0.8363, Validation Accuracy: 0.7869, Loss: 0.1986
+Epoch   2 Batch  100/1077 - Train Accuracy: 0.8187, Validation Accuracy: 0.8161, Loss: 0.1978
+Epoch   2 Batch  150/1077 - Train Accuracy: 0.8240, Validation Accuracy: 0.7919, Loss: 0.1857
+Epoch   2 Batch  200/1077 - Train Accuracy: 0.8102, Validation Accuracy: 0.8157, Loss: 0.1870
+Epoch   2 Batch  250/1077 - Train Accuracy: 0.8185, Validation Accuracy: 0.8129, Loss: 0.1630
+Epoch   2 Batch  300/1077 - Train Accuracy: 0.8590, Validation Accuracy: 0.8161, Loss: 0.1690
+Epoch   2 Batch  350/1077 - Train Accuracy: 0.8512, Validation Accuracy: 0.8022, Loss: 0.1729
+Epoch   2 Batch  400/1077 - Train Accuracy: 0.8379, Validation Accuracy: 0.8338, Loss: 0.1847
+Epoch   2 Batch  450/1077 - Train Accuracy: 0.8637, Validation Accuracy: 0.8022, Loss: 0.1452
+Epoch   2 Batch  500/1077 - Train Accuracy: 0.8938, Validation Accuracy: 0.8448, Loss: 0.1451
+Epoch   2 Batch  550/1077 - Train Accuracy: 0.8102, Validation Accuracy: 0.8338, Loss: 0.1499
+Epoch   2 Batch  600/1077 - Train Accuracy: 0.8709, Validation Accuracy: 0.8487, Loss: 0.1556
+Epoch   2 Batch  650/1077 - Train Accuracy: 0.8410, Validation Accuracy: 0.8839, Loss: 0.1506
+Epoch   2 Batch  700/1077 - Train Accuracy: 0.8672, Validation Accuracy: 0.8487, Loss: 0.1211
+Epoch   2 Batch  750/1077 - Train Accuracy: 0.8664, Validation Accuracy: 0.8622, Loss: 0.1275
+Epoch   2 Batch  800/1077 - Train Accuracy: 0.8641, Validation Accuracy: 0.8533, Loss: 0.1384
+Epoch   2 Batch  850/1077 - Train Accuracy: 0.8344, Validation Accuracy: 0.8722, Loss: 0.1604
+Epoch   2 Batch  900/1077 - Train Accuracy: 0.9016, Validation Accuracy: 0.8739, Loss: 0.1416
+Epoch   2 Batch  950/1077 - Train Accuracy: 0.8817, Validation Accuracy: 0.8796, Loss: 0.1171
+Epoch   2 Batch 1000/1077 - Train Accuracy: 0.8746, Validation Accuracy: 0.8530, Loss: 0.1189
+Epoch   2 Batch 1050/1077 - Train Accuracy: 0.8531, Validation Accuracy: 0.8768, Loss: 0.1164
+Epoch   3 Batch   50/1077 - Train Accuracy: 0.9184, Validation Accuracy: 0.8786, Loss: 0.1178
+Epoch   3 Batch  100/1077 - Train Accuracy: 0.8742, Validation Accuracy: 0.8746, Loss: 0.1141
+Epoch   3 Batch  150/1077 - Train Accuracy: 0.8903, Validation Accuracy: 0.8761, Loss: 0.1132
+Epoch   3 Batch  200/1077 - Train Accuracy: 0.8965, Validation Accuracy: 0.8718, Loss: 0.1203
+Epoch   3 Batch  250/1077 - Train Accuracy: 0.8970, Validation Accuracy: 0.8814, Loss: 0.0957
+Epoch   3 Batch  300/1077 - Train Accuracy: 0.9100, Validation Accuracy: 0.8800, Loss: 0.1008
+Epoch   3 Batch  350/1077 - Train Accuracy: 0.9020, Validation Accuracy: 0.8683, Loss: 0.1101
+Epoch   3 Batch  400/1077 - Train Accuracy: 0.8754, Validation Accuracy: 0.8835, Loss: 0.1173
+Epoch   3 Batch  450/1077 - Train Accuracy: 0.8992, Validation Accuracy: 0.8661, Loss: 0.1122
+Epoch   3 Batch  500/1077 - Train Accuracy: 0.9016, Validation Accuracy: 0.8878, Loss: 0.0885
+Epoch   3 Batch  550/1077 - Train Accuracy: 0.8277, Validation Accuracy: 0.8505, Loss: 0.0960
+Epoch   3 Batch  600/1077 - Train Accuracy: 0.9115, Validation Accuracy: 0.9034, Loss: 0.1030
+Epoch   3 Batch  650/1077 - Train Accuracy: 0.9094, Validation Accuracy: 0.8789, Loss: 0.0887
+Epoch   3 Batch  700/1077 - Train Accuracy: 0.9437, Validation Accuracy: 0.8896, Loss: 0.0860
+Epoch   3 Batch  750/1077 - Train Accuracy: 0.9230, Validation Accuracy: 0.9027, Loss: 0.0965
+Epoch   3 Batch  800/1077 - Train Accuracy: 0.9105, Validation Accuracy: 0.8711, Loss: 0.1067
+Epoch   3 Batch  850/1077 - Train Accuracy: 0.9092, Validation Accuracy: 0.8938, Loss: 0.1217
+Epoch   3 Batch  900/1077 - Train Accuracy: 0.9324, Validation Accuracy: 0.8849, Loss: 0.0967
+Epoch   3 Batch  950/1077 - Train Accuracy: 0.9048, Validation Accuracy: 0.8853, Loss: 0.0897
+Epoch   3 Batch 1000/1077 - Train Accuracy: 0.9089, Validation Accuracy: 0.8952, Loss: 0.0900
+Epoch   3 Batch 1050/1077 - Train Accuracy: 0.8844, Validation Accuracy: 0.8999, Loss: 0.0891
+Epoch   4 Batch   50/1077 - Train Accuracy: 0.9012, Validation Accuracy: 0.9084, Loss: 0.0871
+Epoch   4 Batch  100/1077 - Train Accuracy: 0.9137, Validation Accuracy: 0.8750, Loss: 0.0818
+Epoch   4 Batch  150/1077 - Train Accuracy: 0.8895, Validation Accuracy: 0.8750, Loss: 0.0982
+Epoch   4 Batch  200/1077 - Train Accuracy: 0.9164, Validation Accuracy: 0.9002, Loss: 0.0769
+Epoch   4 Batch  250/1077 - Train Accuracy: 0.9123, Validation Accuracy: 0.9020, Loss: 0.0784
+Epoch   4 Batch  300/1077 - Train Accuracy: 0.9424, Validation Accuracy: 0.8949, Loss: 0.0771
+Epoch   4 Batch  350/1077 - Train Accuracy: 0.9285, Validation Accuracy: 0.8860, Loss: 0.0841
+Epoch   4 Batch  400/1077 - Train Accuracy: 0.8906, Validation Accuracy: 0.8920, Loss: 0.0920
+Epoch   4 Batch  450/1077 - Train Accuracy: 0.9059, Validation Accuracy: 0.8917, Loss: 0.0827
+Epoch   4 Batch  500/1077 - Train Accuracy: 0.9117, Validation Accuracy: 0.9052, Loss: 0.0697
+Epoch   4 Batch  550/1077 - Train Accuracy: 0.8930, Validation Accuracy: 0.8881, Loss: 0.0829
+Epoch   4 Batch  600/1077 - Train Accuracy: 0.9170, Validation Accuracy: 0.9002, Loss: 0.0942
+Epoch   4 Batch  650/1077 - Train Accuracy: 0.9207, Validation Accuracy: 0.9112, Loss: 0.0735
+Epoch   4 Batch  700/1077 - Train Accuracy: 0.9461, Validation Accuracy: 0.9155, Loss: 0.0746
+Epoch   4 Batch  750/1077 - Train Accuracy: 0.9398, Validation Accuracy: 0.9158, Loss: 0.0746
+Epoch   4 Batch  800/1077 - Train Accuracy: 0.8953, Validation Accuracy: 0.8967, Loss: 0.0741
+Epoch   4 Batch  850/1077 - Train Accuracy: 0.9055, Validation Accuracy: 0.9148, Loss: 0.1012
+Epoch   4 Batch  900/1077 - Train Accuracy: 0.9367, Validation Accuracy: 0.9237, Loss: 0.0800
+Epoch   4 Batch  950/1077 - Train Accuracy: 0.9193, Validation Accuracy: 0.8928, Loss: 0.0691
+Epoch   4 Batch 1000/1077 - Train Accuracy: 0.9196, Validation Accuracy: 0.8991, Loss: 0.0788
+Epoch   4 Batch 1050/1077 - Train Accuracy: 0.9195, Validation Accuracy: 0.9070, Loss: 0.0691
+Epoch   5 Batch   50/1077 - Train Accuracy: 0.9258, Validation Accuracy: 0.9141, Loss: 0.0678
+Epoch   5 Batch  100/1077 - Train Accuracy: 0.9332, Validation Accuracy: 0.9226, Loss: 0.0762
+Epoch   5 Batch  150/1077 - Train Accuracy: 0.9103, Validation Accuracy: 0.9070, Loss: 0.0820
+Epoch   5 Batch  200/1077 - Train Accuracy: 0.9250, Validation Accuracy: 0.9169, Loss: 0.0642
+Epoch   5 Batch  250/1077 - Train Accuracy: 0.9112, Validation Accuracy: 0.9258, Loss: 0.0690
+Epoch   5 Batch  300/1077 - Train Accuracy: 0.9375, Validation Accuracy: 0.9222, Loss: 0.0637
+Epoch   5 Batch  350/1077 - Train Accuracy: 0.9219, Validation Accuracy: 0.8970, Loss: 0.0698
+Epoch   5 Batch  400/1077 - Train Accuracy: 0.9187, Validation Accuracy: 0.8984, Loss: 0.0768
+Epoch   5 Batch  450/1077 - Train Accuracy: 0.9254, Validation Accuracy: 0.9165, Loss: 0.0765
+Epoch   5 Batch  500/1077 - Train Accuracy: 0.9336, Validation Accuracy: 0.9240, Loss: 0.0571
+Epoch   5 Batch  550/1077 - Train Accuracy: 0.9199, Validation Accuracy: 0.9141, Loss: 0.0561
+Epoch   5 Batch  600/1077 - Train Accuracy: 0.9036, Validation Accuracy: 0.9141, Loss: 0.0893
+Epoch   5 Batch  650/1077 - Train Accuracy: 0.9324, Validation Accuracy: 0.9268, Loss: 0.0670
+Epoch   5 Batch  700/1077 - Train Accuracy: 0.9406, Validation Accuracy: 0.9396, Loss: 0.0624
+Epoch   5 Batch  750/1077 - Train Accuracy: 0.9383, Validation Accuracy: 0.9212, Loss: 0.0663
+Epoch   5 Batch  800/1077 - Train Accuracy: 0.9320, Validation Accuracy: 0.9212, Loss: 0.0618
+Epoch   5 Batch  850/1077 - Train Accuracy: 0.9081, Validation Accuracy: 0.9084, Loss: 0.0975
+Epoch   5 Batch  900/1077 - Train Accuracy: 0.9172, Validation Accuracy: 0.9144, Loss: 0.0778
+Epoch   5 Batch  950/1077 - Train Accuracy: 0.9375, Validation Accuracy: 0.9052, Loss: 0.0579
+Epoch   5 Batch 1000/1077 - Train Accuracy: 0.9178, Validation Accuracy: 0.9183, Loss: 0.0624
+Epoch   5 Batch 1050/1077 - Train Accuracy: 0.9250, Validation Accuracy: 0.9187, Loss: 0.0575
+Epoch   6 Batch   50/1077 - Train Accuracy: 0.9492, Validation Accuracy: 0.9105, Loss: 0.0646
+Epoch   6 Batch  100/1077 - Train Accuracy: 0.9328, Validation Accuracy: 0.9009, Loss: 0.0697
+Epoch   6 Batch  150/1077 - Train Accuracy: 0.9096, Validation Accuracy: 0.9130, Loss: 0.0711
+Epoch   6 Batch  200/1077 - Train Accuracy: 0.9273, Validation Accuracy: 0.9134, Loss: 0.0626
+Epoch   6 Batch  250/1077 - Train Accuracy: 0.9325, Validation Accuracy: 0.8988, Loss: 0.0619
+Epoch   6 Batch  300/1077 - Train Accuracy: 0.9391, Validation Accuracy: 0.9077, Loss: 0.0648
+Epoch   6 Batch  350/1077 - Train Accuracy: 0.9203, Validation Accuracy: 0.9048, Loss: 0.0637
+Epoch   6 Batch  400/1077 - Train Accuracy: 0.9090, Validation Accuracy: 0.9105, Loss: 0.0822
+Epoch   6 Batch  450/1077 - Train Accuracy: 0.9289, Validation Accuracy: 0.9229, Loss: 0.0713
+Epoch   6 Batch  500/1077 - Train Accuracy: 0.9379, Validation Accuracy: 0.9197, Loss: 0.0568
+Epoch   6 Batch  550/1077 - Train Accuracy: 0.9160, Validation Accuracy: 0.9254, Loss: 0.0557
+Epoch   6 Batch  600/1077 - Train Accuracy: 0.9156, Validation Accuracy: 0.9304, Loss: 0.0672
+Epoch   6 Batch  650/1077 - Train Accuracy: 0.9297, Validation Accuracy: 0.9197, Loss: 0.0639
+Epoch   6 Batch  700/1077 - Train Accuracy: 0.9531, Validation Accuracy: 0.9002, Loss: 0.0637
+Epoch   6 Batch  750/1077 - Train Accuracy: 0.9316, Validation Accuracy: 0.9013, Loss: 0.0660
+Epoch   6 Batch  800/1077 - Train Accuracy: 0.9328, Validation Accuracy: 0.9240, Loss: 0.0649
+Epoch   6 Batch  850/1077 - Train Accuracy: 0.8958, Validation Accuracy: 0.9251, Loss: 0.0965
+Epoch   6 Batch  900/1077 - Train Accuracy: 0.9242, Validation Accuracy: 0.9258, Loss: 0.0706
+Epoch   6 Batch  950/1077 - Train Accuracy: 0.9196, Validation Accuracy: 0.9208, Loss: 0.0553
+Epoch   6 Batch 1000/1077 - Train Accuracy: 0.9167, Validation Accuracy: 0.9006, Loss: 0.0648
+Epoch   6 Batch 1050/1077 - Train Accuracy: 0.9344, Validation Accuracy: 0.9386, Loss: 0.0592
+Epoch   7 Batch   50/1077 - Train Accuracy: 0.9324, Validation Accuracy: 0.9151, Loss: 0.0567
+Epoch   7 Batch  100/1077 - Train Accuracy: 0.9398, Validation Accuracy: 0.9176, Loss: 0.0713
+Epoch   7 Batch  150/1077 - Train Accuracy: 0.9379, Validation Accuracy: 0.9134, Loss: 0.0748
+Epoch   7 Batch  200/1077 - Train Accuracy: 0.9367, Validation Accuracy: 0.9091, Loss: 0.0581
+Epoch   7 Batch  250/1077 - Train Accuracy: 0.9311, Validation Accuracy: 0.8924, Loss: 0.0591
+Epoch   7 Batch  300/1077 - Train Accuracy: 0.9659, Validation Accuracy: 0.8988, Loss: 0.0526
+Epoch   7 Batch  350/1077 - Train Accuracy: 0.9230, Validation Accuracy: 0.9041, Loss: 0.0577
+Epoch   7 Batch  400/1077 - Train Accuracy: 0.9355, Validation Accuracy: 0.9183, Loss: 0.0738
+Epoch   7 Batch  450/1077 - Train Accuracy: 0.9305, Validation Accuracy: 0.9109, Loss: 0.0675
+Epoch   7 Batch  500/1077 - Train Accuracy: 0.9457, Validation Accuracy: 0.8913, Loss: 0.0460
+Epoch   7 Batch  550/1077 - Train Accuracy: 0.9137, Validation Accuracy: 0.9013, Loss: 0.0509
+Epoch   7 Batch  600/1077 - Train Accuracy: 0.9092, Validation Accuracy: 0.9041, Loss: 0.0765
+Epoch   7 Batch  650/1077 - Train Accuracy: 0.9391, Validation Accuracy: 0.9130, Loss: 0.0539
+Epoch   7 Batch  700/1077 - Train Accuracy: 0.9359, Validation Accuracy: 0.9094, Loss: 0.0617
+Epoch   7 Batch  750/1077 - Train Accuracy: 0.9316, Validation Accuracy: 0.9183, Loss: 0.0568
+Epoch   7 Batch  800/1077 - Train Accuracy: 0.9168, Validation Accuracy: 0.9201, Loss: 0.0574
+Epoch   7 Batch  850/1077 - Train Accuracy: 0.9356, Validation Accuracy: 0.9325, Loss: 0.0848
+Epoch   7 Batch  900/1077 - Train Accuracy: 0.9270, Validation Accuracy: 0.9098, Loss: 0.0671
+Epoch   7 Batch  950/1077 - Train Accuracy: 0.9330, Validation Accuracy: 0.8942, Loss: 0.0506
+Epoch   7 Batch 1000/1077 - Train Accuracy: 0.9356, Validation Accuracy: 0.9251, Loss: 0.0569
+Epoch   7 Batch 1050/1077 - Train Accuracy: 0.9527, Validation Accuracy: 0.9038, Loss: 0.0496
+Epoch   8 Batch   50/1077 - Train Accuracy: 0.9434, Validation Accuracy: 0.9286, Loss: 0.0667
+Epoch   8 Batch  100/1077 - Train Accuracy: 0.9430, Validation Accuracy: 0.9197, Loss: 0.0554
+Epoch   8 Batch  150/1077 - Train Accuracy: 0.9129, Validation Accuracy: 0.9254, Loss: 0.0614
+Epoch   8 Batch  200/1077 - Train Accuracy: 0.9332, Validation Accuracy: 0.9141, Loss: 0.0604
+Epoch   8 Batch  250/1077 - Train Accuracy: 0.9247, Validation Accuracy: 0.9205, Loss: 0.0583
+Epoch   8 Batch  300/1077 - Train Accuracy: 0.9609, Validation Accuracy: 0.9229, Loss: 0.0620
+Epoch   8 Batch  350/1077 - Train Accuracy: 0.9203, Validation Accuracy: 0.9247, Loss: 0.0544
+Epoch   8 Batch  400/1077 - Train Accuracy: 0.9348, Validation Accuracy: 0.9215, Loss: 0.0701
+Epoch   8 Batch  450/1077 - Train Accuracy: 0.9379, Validation Accuracy: 0.8991, Loss: 0.0642
+Epoch   8 Batch  500/1077 - Train Accuracy: 0.9352, Validation Accuracy: 0.9176, Loss: 0.0500
+Epoch   8 Batch  550/1077 - Train Accuracy: 0.9090, Validation Accuracy: 0.9098, Loss: 0.0492
+Epoch   8 Batch  600/1077 - Train Accuracy: 0.9200, Validation Accuracy: 0.9368, Loss: 0.0619
+Epoch   8 Batch  650/1077 - Train Accuracy: 0.9590, Validation Accuracy: 0.9212, Loss: 0.0465
+Epoch   8 Batch  700/1077 - Train Accuracy: 0.9543, Validation Accuracy: 0.9141, Loss: 0.0483
+Epoch   8 Batch  750/1077 - Train Accuracy: 0.9449, Validation Accuracy: 0.9130, Loss: 0.0514
+Epoch   8 Batch  800/1077 - Train Accuracy: 0.9227, Validation Accuracy: 0.9290, Loss: 0.0595
+Epoch   8 Batch  850/1077 - Train Accuracy: 0.9118, Validation Accuracy: 0.9219, Loss: 0.0881
+Epoch   8 Batch  900/1077 - Train Accuracy: 0.9328, Validation Accuracy: 0.9031, Loss: 0.0647
+Epoch   8 Batch  950/1077 - Train Accuracy: 0.9435, Validation Accuracy: 0.9038, Loss: 0.0460
+Epoch   8 Batch 1000/1077 - Train Accuracy: 0.9364, Validation Accuracy: 0.9194, Loss: 0.0575
+Epoch   8 Batch 1050/1077 - Train Accuracy: 0.9379, Validation Accuracy: 0.9229, Loss: 0.0478
+Epoch   9 Batch   50/1077 - Train Accuracy: 0.9379, Validation Accuracy: 0.9151, Loss: 0.0628
+Epoch   9 Batch  100/1077 - Train Accuracy: 0.9250, Validation Accuracy: 0.9105, Loss: 0.0505
+Epoch   9 Batch  150/1077 - Train Accuracy: 0.9263, Validation Accuracy: 0.9141, Loss: 0.0570
+Epoch   9 Batch  200/1077 - Train Accuracy: 0.9273, Validation Accuracy: 0.9247, Loss: 0.0551
+Epoch   9 Batch  250/1077 - Train Accuracy: 0.9276, Validation Accuracy: 0.9325, Loss: 0.0553
+Epoch   9 Batch  300/1077 - Train Accuracy: 0.9692, Validation Accuracy: 0.9197, Loss: 0.0433
+Epoch   9 Batch  350/1077 - Train Accuracy: 0.9203, Validation Accuracy: 0.9244, Loss: 0.0587
+Epoch   9 Batch  400/1077 - Train Accuracy: 0.9477, Validation Accuracy: 0.9237, Loss: 0.0587
+Epoch   9 Batch  450/1077 - Train Accuracy: 0.9262, Validation Accuracy: 0.9173, Loss: 0.0603
+Epoch   9 Batch  500/1077 - Train Accuracy: 0.9426, Validation Accuracy: 0.9332, Loss: 0.0473
+Epoch   9 Batch  550/1077 - Train Accuracy: 0.9187, Validation Accuracy: 0.9229, Loss: 0.0494
+Epoch   9 Batch  600/1077 - Train Accuracy: 0.9178, Validation Accuracy: 0.9176, Loss: 0.0599
+Epoch   9 Batch  650/1077 - Train Accuracy: 0.9320, Validation Accuracy: 0.9286, Loss: 0.0549
+Epoch   9 Batch  700/1077 - Train Accuracy: 0.9645, Validation Accuracy: 0.9286, Loss: 0.0495
+Epoch   9 Batch  750/1077 - Train Accuracy: 0.9406, Validation Accuracy: 0.9165, Loss: 0.0436
+Epoch   9 Batch  800/1077 - Train Accuracy: 0.9398, Validation Accuracy: 0.9389, Loss: 0.0559
+Epoch   9 Batch  850/1077 - Train Accuracy: 0.9133, Validation Accuracy: 0.9297, Loss: 0.0884
+Epoch   9 Batch  900/1077 - Train Accuracy: 0.9328, Validation Accuracy: 0.9467, Loss: 0.0575
+Epoch   9 Batch  950/1077 - Train Accuracy: 0.9338, Validation Accuracy: 0.9102, Loss: 0.0520
+Epoch   9 Batch 1000/1077 - Train Accuracy: 0.9096, Validation Accuracy: 0.9105, Loss: 0.0431
+Epoch   9 Batch 1050/1077 - Train Accuracy: 0.9449, Validation Accuracy: 0.9439, Loss: 0.0456
+Model Trained and Saved
+</pre>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13149,7 +13117,7 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -13164,7 +13132,8 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13174,7 +13143,7 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -13194,7 +13163,8 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13212,7 +13182,7 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[114]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">sentence_to_seq</span><span class="p">(</span><span class="n">sentence</span><span class="p">,</span> <span class="n">vocab_to_int</span><span class="p">):</span>
@@ -13248,11 +13218,7 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Tests Passed
 </pre>
@@ -13263,7 +13229,8 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13274,7 +13241,7 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">translate_sentence</span> <span class="o">=</span> <span class="s1">&#39;he saw a old yellow truck .&#39;</span>
@@ -13315,8 +13282,43 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>INFO:tensorflow:Restoring parameters from checkpoints/dev
+</pre>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>INFO:tensorflow:Restoring parameters from checkpoints/dev
+</pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Input
+  Word Ids:      [50, 21, 128, 41, 6, 229, 4]
+  English Words: [&#39;he&#39;, &#39;saw&#39;, &#39;a&#39;, &#39;old&#39;, &#39;yellow&#39;, &#39;truck&#39;, &#39;.&#39;]
+
+Prediction
+  Word Ids:      [150, 17, 298, 55, 306, 310, 280, 1]
+  French Words: elle ne d&#39; nouveau camion bleu . &lt;EOS&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13330,8 +13332,4 @@ la californie est le gel habituellement en décembre , et il est occupé en avri
     </div>
   </div>
 </body>
-
- 
-
-
 </html>
